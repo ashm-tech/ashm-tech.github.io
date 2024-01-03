@@ -41,48 +41,87 @@
 
         .main {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             margin: 20px;
         }
 
-        .card {
-            width: 30%;
-            margin: 10px;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px #999;
-        }
-
-        .card img {
-            width: 100%;
+        .profile {
+            width: 200px;
             height: 200px;
+            border-radius: 50%;
             object-fit: cover;
         }
 
-        .card h3 {
-            padding: 10px;
+        .name {
             font-family: Arial, sans-serif;
-            font-size: 18px;
+            font-size: 28px;
             color: #333;
+            margin: 10px;
         }
 
-        .card p {
-            padding: 10px;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .skill {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .skill p {
             font-family: Arial, sans-serif;
             font-size: 14px;
             color: #333;
         }
 
-        .card a {
-            display: block;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            text-decoration: none;
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
         }
 
-        .card a:hover {
-            background-color: #555;
+        .project {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #999;
+            position: relative;
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
         }
 
         .footer {
@@ -103,51 +142,34 @@
         }
 
         @media (max-width: 768px) {
-            .main {
+            .nav {
                 flex-direction: column;
             }
 
-            .card {
-                width: 100%;
+            .profile {
+                width: 150px;
+                height: 150px;
+            }
+
+            .skill {
+                width: 80px;
+                height: 80px;
+            }
+
+            .skill img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .project {
+                width: 200px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Абдулаев Шамиль Магомедович</h1>
-            <p>Full Stack разработчик (Java, Python, TS/JS)</p>
-        </div>
-        <div class="nav">
-            <a href="index.html">Главная</a>
-            <a href="projects.html">Проекты</a>
-            <a href="contact.html">Контакты</a>
-        </div>
-        <div class="main">
-            <div class="card">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Проект 1</h3>
-                <p>Описание проекта 1</p>
-                <a href="project1.html">Подробнее</a>
-            </div>
-            <div class="card">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Проект 2</h3>
-                <p>Описание проекта 2</p>
-                <a href="project2.html">Подробнее</a>
-            </div>
-            <div class="card">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Проект 3</h3>
-                <p>Описание проекта 3</p>
-                <a href="project3.html">Подробнее</a>
-            </div>
-        </div>
-        <div class="footer">
-            <p>© 2024 Абдулаев Шамиль Магомедович. Все права защищены.</p>
-            <p>Связаться со мной: <a href="mailto:shamil@ashm.tech">shamil@ashm.tech</a></p>
-        </div>
-    </div>
-</body>
-</html>
+    <div id="app">
+        <div class="container">
+            <div class="header">
+                <h1>Сайт-визитка Full Stack разработчика</h1>
